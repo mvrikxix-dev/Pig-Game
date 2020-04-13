@@ -1,0 +1,102 @@
+*{
+    outline: none;
+}
+
+body{
+    background-color: #080811;
+}
+
+.wrapper{
+    background-color: #0b0b12;
+    box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.4);
+    width: 70%;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+.player-0-panel,
+.player-1-panel{
+    background-color: #0b0b12;
+    width: 50%;
+    height: 600px;
+    float: left;
+    outline: none;
+    text-align: center;
+}
+.player-0-panel{border-radius: 12px 0 0 12px;}
+.player-1-panel{border-radius: 0 12px 12px 0;}
+
+.player-name{
+/*    border: 1px dashed white;*/
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Kanit', sans-serif;
+    font-size: 45px;
+    font-weight: 200;
+    color: #00000b;
+    letter-spacing: 4px;
+    margin-top: 130px;
+    cursor:text
+}
+
+.player-score{
+/*    border: 1px dashed white;*/
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Kanit', sans-serif;
+    font-size: 100px;
+    font-weight: 100;
+    color: #00000b;
+}
+
+.player-current-box{
+/*    border: 1px dashed white;*/
+    width: 17%;
+    text-align: center;
+    display: inline-block;
+    background-color: #00000a;
+    position: relative;
+    top: 150px;
+}
+
+.player-current-label{
+/*    border: 1px dashed black;*/
+    color: #0b0b12;
+    font-size: 23px;
+    width: 20%; 
+    float: left;
+    padding: 4px;
+}
+
+.player-current-score{
+/*    border: 1px dashed black;*/
+    font-family: 'Kanit', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    color: #0b0b12;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-right: 25px;
+    padding-top: 8px;
+}
+
+/*#144394
+#941414*/
+
+.active{background-color: #00000a;}
+.active .player-name{color: #144394;}
+.active .player-score{color: #144394;}
+.active .player-current-box{background-color: #144394};
+.active .player-name::before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f0da";
+    font-size: 50px;
+}
+
