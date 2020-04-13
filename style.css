@@ -55,6 +55,19 @@ body{
     color: #00000b;
 }
 
+.active .player-name::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0da";
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.active{background-color: #00000a;}
+.active .player-name{color: #144394;}
+.active .player-score{color: #144394;}
+
 .player-current-box{
 /*    border: 1px dashed white;*/
     width: 17%;
@@ -86,17 +99,9 @@ body{
     padding-top: 8px;
 }
 
+.active .player-current-box{background-color: #144394};
+
 /*#144394
 #941414*/
 
-.active{background-color: #00000a;}
-.active .player-name{color: #144394;}
-.active .player-score{color: #144394;}
-.active .player-current-box{background-color: #144394};
-.active .player-name::before{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900; 
-    content: "\f0da";
-    font-size: 50px;
-}
 
