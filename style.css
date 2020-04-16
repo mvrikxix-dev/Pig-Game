@@ -3,84 +3,74 @@
 }
 
 body {
-    background-color: #080811;
+    background-color: #10101d;
 }
 
-@media screen and (min-width: 320px) and (max-width: 375px) {
+@media screen and (min-width: 30px) and (max-width: 375px) {
     .wrapper {
-        background-color: #0b0b12;
         box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
-        width: 80%;
-        height: 75%;
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border-radius: 12px;
     }
 
     .player-0-panel,
     .player-1-panel {
-        background-color: #0a0a14;
+        background-color: #a8a8cb;
         width: 100%;
         height: 50%;
         text-align: center;
     }
 
-    .player-0-panel {
-        border-radius: 12px 12px 0 0;
-    }
-
-    .player-1-panel {
-        border-radius: 0 0 12px 12px;
-    }
-
     .dice-img {
-        width: 20vw;
-        height: 20vw;
+        width: 27vw;
+        height: 27vw;
         position: absolute;
         top: 50%;
-        left: -80%;
+        left: -105%;
         transform: translateY(-50%);
-        background-color: #0a0a14;
+        background-color:  #10101d;
         box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
         border-radius: 15%;
         text-align: center;
     }
 
     .dice-img .img {
-        font-size: 16vw;
-        line-height: 1.36;
-        color: #6363e7;
+        font-size: 22vw;
+        line-height: 1.31;
+        color: #a8a8cb;
         text-align: center;
     }
 
     .hold {
         font-size: 7vw;
-        color: #00000b;
+        color:  #10101d;
         cursor: pointer;
         position: absolute;
-        top: 57%;
-        left: 78%;
+        top: 53%;
+        left: 79%;
         transform: translateY(-50%);
     }
 
     .hold:hover {
-        color: #6363e7;
+        color: #090914;
     }
 
     .new-game {
         font-size: 6vw;
-        color: #00000b;
+        color:  #10101d;
         cursor: pointer;
         position: absolute;
         top: 53%;
-        left: 8%;
+        left: 10%;
         transform: translateY(-50%);
     }
 
     .new-game:hover {
-        color: #6363e7;
+        color: #090914;
     }
 
 
@@ -89,18 +79,18 @@ body {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 15vw;
-        height: 15vw;
+        width: 18vw;
+        height: 18vw;
         border-radius: 50%;
-        background-color: #6363e7;
+        background-color: #10101d;
         cursor: pointer;
-        box-shadow: 0px 1px 7px 5px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
     }
 
     .dice i {
-        font-size: 8vw;
-        color: #00000b;
-        line-height: 1.8;
+        font-size: 9vw;
+        color:  #a8a8cb;
+        line-height: 1.9;
     }
 
     .dice:active {
@@ -110,43 +100,66 @@ body {
     .control-panel {
         position: absolute;
         top: 50%;
-        left: 46%;
+        left: 52%;
         transform: translateY(-50%);
-        width: 36vw;
-        height: 9vw;
-        background-color: #0a0a14;
+        width: 40vw;
+        height: 14vw;
+        background-color:  #a8a8cb;
         border-radius: 40px;
         text-align: center;
         cursor: pointer;
         box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
         cursor: default;
     }
-
-    .player-name {
-        /*        border: 1px dashed white;*/
-        text-align: center;
+    
+    #player-0{
         display: inline-block;
+        position: relative;
         font-family: 'Kanit', sans-serif;
-        font-size: 7vw;
+        font-size: 10vw;
         font-weight: 200;
-        color: #00000a;
+        color: #090914;
+        letter-spacing: 4px;
+        margin-top: 15vw;
+    }
+    
+    #player-1{
+        display: inline-block;
+        position: relative;
+        bottom: -190px;
+        font-family: 'Kanit', sans-serif;
+        font-size: 10vw;
+        font-weight: 200;
+        color: #090914;
         letter-spacing: 4px;
         margin-top: 15vw;
     }
 
-    .player-score {
-/*              border: 1px dashed white;*/
+    #score-0{
         text-align: center;
         display: block;
         font-family: 'Kanit', sans-serif;
-        font-size: 20vw;
+        font-size: 25vw;
         font-weight: 100;
-        color: #00000a;
+        color: #090914;
         cursor: default;
         user-select: none;
-        margin-top: -5%;
-        ;
+        margin-top: -8%;
     }
+    
+    #score-1 {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 485px;
+        font-family: 'Kanit', sans-serif;
+        font-size: 25vw;
+        font-weight: 100;
+        color:  #090914;
+        cursor: default;
+        user-select: none; margin-top: -5%;
+}
 
     .active .player-name::before {
         font-family: "Font Awesome 5 Free";
@@ -156,42 +169,77 @@ body {
         position: relative;
         top: 2px;
     }
+    
+    .active #player-0,
+    .active #player-1{
+        color: #717198;
+    }
 
     .active {
-        background-color: #00000a;
+        background-color: #090914;
     }
 
-    .active .player-name {
-        color: #6363e7;
-    }
 
-    .active .player-score {
-        color: #6363e7;
+    .active #score-0,
+    .active #score-1{
+        color: #717198;
     }
     
     .winner {
-        background-color: #6363e7;
+        background-color: #090914;
     }
 
-    .winner .player-name,
-    .winner .player-score {
-        color: #00000b;
+    .winner #player-0,
+    .winner #player-1 {
+        font-weight: 300;
+        color: #717198;
+    }
+    
+    .winner #score-0,
+    .winner #score-1 {
+        font-weight: 200;
+        font-size: 43vw;
+        top: 385px;
+        color:  #717198
+    }
+    
+    .winner .player-name::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f559";
+        margin-right: 10px;
+        position: relative;
+        top: 2px;
     }
 
-    .player-current-box {
-        width: 14vw;
+    
+    #current-box-0 {
+        width: 24vw;
         height: 23vw;
         text-align: center;
         display: block;
-        background-color: #00000a;
-        position: relative;
-        top: -30.5vw;
-        right: -66vw;
+        background-color: #090914;
+        position: absolute;
+        top: 185px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #current-box-1 {
+        width: 24vw;
+        height: 23vw;
+        text-align: center;
+        display: block;
+        background-color: #090914;
+        position: absolute;
+        top: 405px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .player-current-label {
 /*        border: 1px dashed black;*/
-        color: #0a0a14;
+        color: #717198;
         font-size: 6vw;
         display: block;
         padding-top: 2vw;
@@ -202,29 +250,33 @@ body {
         font-family: 'Kanit', sans-serif;
         font-size: 9vw;
         font-weight: 200;
-        color: #0a0a14;
+        color: #717198;
         cursor: default;
         user-select: none;
         margin-top: -1.5vw;
     }
 
-    .active .player-current-box {
-        background-color: #6363e7;
+    .active #current-box-0,
+    .active #current-box-1{
+        background-color: #717198;
     }
-    
-    .winner .player-current-box {
-        background-color: #00000b;
+      
+    .active .player-current-box > div {
+        color: #090914;
+    }
+    .winner #current-box-0,
+    .winner #current-box-1{
+        display: none;
     }
 
     .winner .player-current-box > div {
-        color: #6363e7;
+        color: #090914;
     }
 
 }
 
 @media only screen and (min-width: 1440px) {
     .wrapper {
-        background-color: #0b0b12;
         box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
         width: 80%;
         height: 600px;
@@ -235,11 +287,9 @@ body {
         border-radius: 12px;
     }
 
-    /*#090914*/
-
     .player-0-panel,
     .player-1-panel {
-        background-color: #0a0a14;
+        background-color: #a8a8cb;
         width: 50%;
         height: 600px;
         float: left;
@@ -262,7 +312,7 @@ body {
         top: -210px;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #0a0a14;
+        background-color:  #10101d;
         box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
         border-radius: 25%;
         text-align: center;
@@ -271,7 +321,7 @@ body {
     .dice-img .img {
         font-size: 110px;
         line-height: 1.45;
-        color: #6363e7;
+        color: #a8a8cb;
         text-align: center;
     }
 
@@ -280,7 +330,7 @@ body {
         position: absolute;
         top: -5px;
         right: -67px;
-        color: #6363e7;
+        color: #10101d;
         font-family: 'Kanit', sans-serif;
         font-weight: 300;
         font-size: 18px;
@@ -291,7 +341,7 @@ body {
 
     .hold {
         font-size: 40px;
-        color: #00000b;
+        color:  #090914;
         cursor: pointer;
         position: absolute;
         top: 168px;
@@ -300,7 +350,7 @@ body {
     }
 
     .hold:hover {
-        color: #6363e7;
+        color: #10101d;
     }
 
     .new-game:hover::after {
@@ -308,7 +358,7 @@ body {
         position: absolute;
         top: -5px;
         right: -118px;
-        color: #6363e7;
+        color: #10101d;
         font-family: 'Kanit', sans-serif;
         font-weight: 300;
         font-size: 18px;
@@ -318,7 +368,7 @@ body {
 
     .new-game {
         font-size: 30px;
-        color: #00000b;
+        color:  #090914;
         cursor: pointer;
         position: absolute;
         top: 17px;
@@ -327,7 +377,7 @@ body {
     }
 
     .new-game:hover {
-        color: #6363e7;
+        color: #10101d;
     }
 
     .dice:hover::after {
@@ -336,7 +386,7 @@ body {
         position: absolute;
         top: 25px;
         right: -63px;
-        color: #6363e7;
+        color: #10101d;
         font-family: 'Kanit', sans-serif;
         font-weight: 300;
         font-size: 18px;
@@ -352,14 +402,15 @@ body {
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        background-color: #6363e7;
+        background-color: #10101d;
         cursor: pointer;
-        box-shadow: 0px 1px 7px 5px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
     }
 
     .dice i {
         font-size: 45px;
-        color: #00000b;
+        font-size: 45px;
+        color:  #a8a8cb;
         line-height: 2.1;
     }
 
@@ -374,7 +425,7 @@ body {
         transform: translateX(-50%);
         width: 65px;
         height: 220px;
-        background-color: #0a0a14;
+        background-color:  #a8a8cb;
         border-radius: 40px;
         text-align: center;
         cursor: pointer;
@@ -389,7 +440,7 @@ body {
         font-family: 'Kanit', sans-serif;
         font-size: 50px;
         font-weight: 200;
-        color: #00000a;
+        color:  #090914;
         letter-spacing: 4px;
         margin-top: 125px;
     }
@@ -402,7 +453,7 @@ body {
         font-family: 'Kanit', sans-serif;
         font-size: 130px;
         font-weight: 100;
-        color: #00000a;
+        color:  #090914;
         cursor: default;
         user-select: none;
         margin-top: -10px;
@@ -419,39 +470,39 @@ body {
     }
 
     .active {
-        background-color: #00000a;
-    }
-
-    .active .player-name {
-        color: #6363e7;
-    }
-
-    .active .player-score {
-        color: #6363e7;
+        background-color: #717198;
     }
 
     .winner {
-        background-color: #6363e7;
+        background-color: #090914;
     }
 
     .winner .player-name,
     .winner .player-score {
-        color: #00000b;
+        color:#a8a8cb;
+        font-weight: 200;
+    }
+    
+    .winner .player-name::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f559";
+        margin-right: 10px;
+        position: relative;
+        top: 2px;
     }
 
     .player-current-box {
-        /*    border: 1px dashed white;*/
         width: 25%;
         text-align: center;
         display: inline-block;
-        background-color: #00000a;
+        background-color:  #090914;
         position: relative;
         top: 113px;
     }
 
     .player-current-label {
-        /*    border: 1px dashed black;*/
-        color: #0a0a14;
+        color:  #a8a8cb;
         font-size: 23px;
         width: 20%;
         float: left;
@@ -459,11 +510,10 @@ body {
     }
 
     .player-current-score {
-        /*    border: 1px dashed black;*/
         font-family: 'Kanit', sans-serif;
         font-size: 50px;
         font-weight: 200;
-        color: #0a0a14;
+        color:  #a8a8cb;
         margin-bottom: 20px;
         text-align: center;
         padding-right: 25%;
@@ -473,14 +523,18 @@ body {
     }
 
     .active .player-current-box {
-        background-color: #6363e7;
+        background-color:  #090914;
+    }
+    
+     .active .player-current-box > div {
+        color: #717198;
     }
 
     .winner .player-current-box {
-        background-color: #00000b;
+        background-color: #a8a8cb;
     }
 
     .winner .player-current-box > div {
-        color: #6363e7;
+        color:  #090914;
     }
 }

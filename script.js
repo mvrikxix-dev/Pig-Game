@@ -54,9 +54,9 @@ document.querySelector('.hold').addEventListener('click', function () {
         document.getElementById('current-' + activePlayer).textContent = '0';
 
         //Check if the player won
-        if (score[activePlayer] >= 20) {
+        if (score[activePlayer] >= 100) {
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
-            document.querySelector('#player-' + activePlayer).textContent = 'WINNER';
+            document.querySelector('#player-' + activePlayer).textContent = 'WINNER!';
             document.querySelector('.img').firstChild.className = 'fas fa-square';
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             isGamePlaying = false;
@@ -91,7 +91,6 @@ function init() {
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
     document.getElementById('player-0').textContent = 'PLAYER 1';
-    document.getElementById('player-1').textContent = 'PLAYER 2';
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.remove('active');
